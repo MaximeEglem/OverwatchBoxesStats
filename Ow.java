@@ -21,7 +21,6 @@ enum Rarities {
 class HeroeItems {
 }
 
-
 enum Rarities {
     COMMUN("commun", "white"), RARE("rare", "blue"), EPIC("epic", "purple"), LEGENDARY(
             "legendary", "orange");
@@ -47,126 +46,210 @@ enum Rarities {
 class Bastion extends HeroeItems {
 
     Bastion() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class DVa extends HeroeItems {
 
     DVa() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Genji extends HeroeItems {
 
     Genji() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Hanzo extends HeroeItems {
 
     Hanzo() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Junkrat extends HeroeItems {
 
     Junkrat() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Lucio extends HeroeItems {
 
     Lucio() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class McCree extends HeroeItems {
 
     McCree() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Mei extends HeroeItems {
 
     Mei() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Mercy extends HeroeItems {
 
     Mercy() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Pharah extends HeroeItems {
 
     Pharah() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Reaper extends HeroeItems {
 
     Reaper() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Reinhardt extends HeroeItems {
 
     Reinhardt() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Roadhog extends HeroeItems {
 
     Roadhog() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Soldier76 extends HeroeItems {
 
     Soldier76() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Symmetra extends HeroeItems {
 
     Symmetra() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Torbjorn extends HeroeItems {
 
     Torbjorn() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Tracer extends HeroeItems {
 
     Tracer() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Widowmaker extends HeroeItems {
 
     Widowmaker() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Winston extends HeroeItems {
 
     Winston() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Zarya extends HeroeItems {
 
     Zarya() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
 class Zenyatta extends HeroeItems {
 
     Zenyatta() {
+        super.commun = new CommunItems(37);
+        super.rare = new RareItems(7);
+        super.epic = new EpicItems(8);
+        super.legendary = new LegendaryItems(4);
     }
 }
 
