@@ -22,6 +22,27 @@ class HeroeItems {
 }
 
 
+enum Rarities {
+    COMMUN("commun", "white"), RARE("rare", "blue"), EPIC("epic", "purple"), LEGENDARY(
+            "legendary", "orange");
+
+    private int    index;
+    private String rarity = "";
+    private String color  = "";
+
+    Rarities(String rarity, String color) {
+        this.rarity = rarity;
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String toString() {
+        return rarity;
+    }
+}
 
 class CommunItems extends Items {
 
