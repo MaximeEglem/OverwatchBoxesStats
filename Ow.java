@@ -44,6 +44,132 @@ enum Rarities {
     }
 }
 
+class Bastion extends HeroeItems {
+
+    Bastion() {
+    }
+}
+
+class DVa extends HeroeItems {
+
+    DVa() {
+    }
+}
+
+class Genji extends HeroeItems {
+
+    Genji() {
+    }
+}
+
+class Hanzo extends HeroeItems {
+
+    Hanzo() {
+    }
+}
+
+class Junkrat extends HeroeItems {
+
+    Junkrat() {
+    }
+}
+
+class Lucio extends HeroeItems {
+
+    Lucio() {
+    }
+}
+
+class McCree extends HeroeItems {
+
+    McCree() {
+    }
+}
+
+class Mei extends HeroeItems {
+
+    Mei() {
+    }
+}
+
+class Mercy extends HeroeItems {
+
+    Mercy() {
+    }
+}
+
+class Pharah extends HeroeItems {
+
+    Pharah() {
+    }
+}
+
+class Reaper extends HeroeItems {
+
+    Reaper() {
+    }
+}
+
+class Reinhardt extends HeroeItems {
+
+    Reinhardt() {
+    }
+}
+
+class Roadhog extends HeroeItems {
+
+    Roadhog() {
+    }
+}
+
+class Soldier76 extends HeroeItems {
+
+    Soldier76() {
+    }
+}
+
+class Symmetra extends HeroeItems {
+
+    Symmetra() {
+    }
+}
+
+class Torbjorn extends HeroeItems {
+
+    Torbjorn() {
+    }
+}
+
+class Tracer extends HeroeItems {
+
+    Tracer() {
+    }
+}
+
+class Widowmaker extends HeroeItems {
+
+    Widowmaker() {
+    }
+}
+
+class Winston extends HeroeItems {
+
+    Winston() {
+    }
+}
+
+class Zarya extends HeroeItems {
+
+    Zarya() {
+    }
+}
+
+class Zenyatta extends HeroeItems {
+
+    Zenyatta() {
+    }
+}
+
 class CommunItems extends Items {
 
     CommunItems(int numberItems) {
