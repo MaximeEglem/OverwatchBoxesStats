@@ -26,4 +26,4 @@ Percent of Total |	58.66% | 31.69% | 7.22% | 2.43%
 Drop rate |	97.08% | 78.22% | 25.91% | 9.38%
 
 
-[reddit](hhttps://www.reddit.com/r/Overwatch/comments/4mbpz9/loot_box_drop_rate_1000_boxes_sample_size/):
+[reddit](https://www.reddit.com/r/Overwatch/comments/4mbpz9/loot_box_drop_rate_1000_boxes_sample_size/):
