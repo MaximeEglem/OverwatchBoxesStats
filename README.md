@@ -26,4 +26,10 @@ Percent of Total |	58.66% | 31.69% | 7.22% | 2.43%
 Drop rate |	97.08% | 78.22% | 25.91% | 9.38%
 
 
-[reddit](https://www.reddit.com/r/Overwatch/comments/4mbpz9/loot_box_drop_rate_1000_boxes_sample_size/):
+[reddit Loot Box Drop Rate](https://www.reddit.com/r/Overwatch/comments/4mbpz9/loot_box_drop_rate_1000_boxes_sample_size/):
+
+
+[reddit Original post](https://www.reddit.com/r/Overwatch/comments/4n4vp2/how_many_boxes_do_you_need_to_get_all_items/):
+
+## 968 boxes needed
+
