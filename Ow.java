@@ -6,26 +6,144 @@ import java.util.List;
 class Ow {
 
     static private Heroes heroes;
-    static int[]          communStack;
-    static int            communItemsNotOwn;
-    static int[]          rareStack;
-    static int            rareItemsNotOwn;
-    static int[]          epicStack;
-    static int            epicItemsNotOwn;
-    static int[]          legendaryStack;
-    static int            legendaryItemsNotOwn;
-    static int            gold        = 0;
-    static int            boxesNeeded = 0;
-    static int            ItemsNotOwn;
-    static int            indexRandom;
-
+    static int[] communStack;
+    static int communItemsNotOwn;
+    static int[] rareStack;
+    static int rareItemsNotOwn;
+    static int[] epicStack;
+    static int epicItemsNotOwn;
+    static int[] legendaryStack;
+    static int legendaryItemsNotOwn;
+    static int gold = 0;
+    static int boxesNeeded = 0;
+    static int ItemsNotOwn;
+    static int indexRandom;
+    
     public static void main(String[] args) {
-
-      
+        
+        int numberTest = 1000;
+        for (int i = 0; i < numberTest; i++) {
+            heroes = new Heroes();
+            communStack = new int[heroes.getAllCommun().getNumber()];
+            communItemsNotOwn = heroes.getAllCommun().getNumber();
+            rareStack = new int[heroes.getAllRare().getNumber()];
+            rareItemsNotOwn = heroes.getAllRare().getNumber();
+            epicStack = new int[heroes.getAllEpic().getNumber()];
+            epicItemsNotOwn = heroes.getAllEpic().getNumber();
+            legendaryStack = new int[heroes.getAllLegendary().getNumber()];
+            legendaryItemsNotOwn = heroes.getAllLegendary().getNumber();
+            ItemsNotOwn = heroes.getTotal();
+            int communPourmille = (int) (heroes.getAllCommun().getPourcentage() * 100);
+            int rarePourmille = communPourmille + (int) (heroes.getAllRare().getPourcentage() * 100);
+            int epicPourmille = rarePourmille + (int) (heroes.getAllEpic().getPourcentage() * 100);
+        
+            while (ItemsNotOwn > 0) {
+                boxesNeeded += 1;
+                int itemRandom = (int) (Math.random() * (10000 - 1)) + 1;
+                if (itemRandom < communPourmille) // COMMUN
+                {
+                    indexRandom = (int) (Math.random() * communStack.length);
+                    if (communStack[indexRandom] == 0) {
+                        communStack[indexRandom] = 1;
+                        ItemsNotOwn--;
+                        communItemsNotOwn--;
+                    } else {
+                        gold += heroes.getAllCommun().getPrice() / 4;
+                        spendGoldForItem();
+                    }
+                } else if (itemRandom < rarePourmille) { //RARE
+                    indexRandom = (int) (Math.random() * rareStack.length);
+                    if (rareStack[indexRandom] == 0) {
+                        rareStack[indexRandom] = 1;
+                        ItemsNotOwn--;
+                        rareItemsNotOwn--;
+                    } else {
+                        gold += heroes.getAllRare().getPrice() / 4;
+                        spendGoldForItem();
+                    }
+                } else if (itemRandom < epicPourmille)// EPIC
+                {
+                    indexRandom = (int) (Math.random() * epicStack.length);
+                    if (epicStack[indexRandom] == 0) {
+                        epicStack[indexRandom] = 1;
+                        ItemsNotOwn--;
+                        epicItemsNotOwn--;
+                    } else {
+                        gold += heroes.getAllEpic().getPrice() / 4;
+                        spendGoldForItem();
+                    }
+                } else {// LEGENDARY
+                    indexRandom = (int) (Math.random() * legendaryStack.length);
+                    if (legendaryStack[indexRandom] == 0) {
+                        legendaryStack[indexRandom] = 1;
+                        ItemsNotOwn--;
+                        legendaryItemsNotOwn--;
+                    } else {
+                        gold += heroes.getAllLegendary().getPrice() / 4;
+                        spendGoldForItem();
+                    }
+                }
+            }
+            System.out.println("Number of boxes needed : " + boxesNeeded / 4);// 
+        }
+        System.out.println("Number of boxes needed average : " + boxesNeeded/ numberTest / 4);//
     }
 
-    private static void spendGoldForItem() {
-       }
+    private static void spendGoldForItem(){
+        if (legendaryItemsNotOwn > 0) {
+            if(gold > heroes.getAllLegendary().getPrice()){
+                //System.out.println("Buying one legendery item");
+                for (int i = 0; i < legendaryStack.length; i++) {
+                    if (legendaryStack[i] == 0) {
+                        legendaryStack[i] = 1;
+                        gold -= heroes.getAllLegendary().getPrice();
+                        legendaryItemsNotOwn--;
+                        ItemsNotOwn--;
+                        break;
+                    }
+                }
+            }
+        }else if (epicItemsNotOwn > 0) {
+            if(gold > heroes.getAllEpic().getPrice()){
+                //System.out.println("Buying one epic item");
+                for (int i = 0; i < epicStack.length; i++) {
+                    if (epicStack[i] == 0) {
+                        epicStack[i] = 1;
+                        gold -= heroes.getAllEpic().getPrice();
+                        epicItemsNotOwn--;
+                        ItemsNotOwn--;
+                        break;
+                    }
+                }
+            }
+        }else if (rareItemsNotOwn > 0) {
+            if(gold > heroes.getAllRare().getPrice()){
+                //System.out.println("Buying one rare item");
+                for (int i = 0; i < rareStack.length; i++) {
+                    if (rareStack[i] == 0) {
+                        rareStack[i] = 1;
+                        gold -= heroes.getAllRare().getPrice();
+                        rareItemsNotOwn--;
+                        ItemsNotOwn--;
+                        break;
+                    }
+                }
+            }
+        }else {
+            if(gold > heroes.getAllCommun().getPrice()){
+                //System.out.println("Buying one commun item");
+                for (int i = 0; i < communStack.length; i++) {
+                    if (communStack[i] == 0) {
+                        communStack[i] = 1;
+                        gold -= heroes.getAllCommun().getPrice();
+                        communItemsNotOwn--;
+                        ItemsNotOwn--;
+                        break;
+                    }
+                }
+            }
+        }
+    }
 }
 
 enum Rarities {
@@ -60,7 +178,10 @@ class HeroeItems {
     HeroeItems() {
     }
 
-    HeroeItems(int communNb, int rareNb, int epicNb, int legendaryNb) {
+    HeroeItems(int communNb, int rareNb, int epicNb, int legendaryNb) { // 3
+                                                                        // items
+                                                                        // per
+                                                                        // boxes
         commun = new CommunItems(communNb);
         rare = new RareItems(rareNb);
         epic = new EpicItems(epicNb);
