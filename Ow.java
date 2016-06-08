@@ -1,5 +1,3 @@
-package fr.swisslife.front.menu.enumeration;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +16,8 @@ class Ow {
     static int boxesNeeded = 0;
     static int ItemsNotOwn;
     static int indexRandom;
+    final static int priceDuplicationReward = 20;
+    final static int itemPerBox = 4;
     
     public static void main(String[] args) {
         
@@ -48,7 +48,7 @@ class Ow {
                         ItemsNotOwn--;
                         communItemsNotOwn--;
                     } else {
-                        gold += heroes.getAllCommun().getPrice() / 4;
+                        gold += heroes.getAllCommun().getPrice() * priceDuplicationReward / 100;
                         spendGoldForItem();
                     }
                 } else if (itemRandom < rarePourmille) { //RARE
@@ -58,7 +58,7 @@ class Ow {
                         ItemsNotOwn--;
                         rareItemsNotOwn--;
                     } else {
-                        gold += heroes.getAllRare().getPrice() / 4;
+                        gold += heroes.getAllRare().getPrice() * priceDuplicationReward / 100;
                         spendGoldForItem();
                     }
                 } else if (itemRandom < epicPourmille)// EPIC
@@ -69,7 +69,7 @@ class Ow {
                         ItemsNotOwn--;
                         epicItemsNotOwn--;
                     } else {
-                        gold += heroes.getAllEpic().getPrice() / 4;
+                        gold += heroes.getAllEpic().getPrice() * priceDuplicationReward / 100;
                         spendGoldForItem();
                     }
                 } else {// LEGENDARY
@@ -79,14 +79,14 @@ class Ow {
                         ItemsNotOwn--;
                         legendaryItemsNotOwn--;
                     } else {
-                        gold += heroes.getAllLegendary().getPrice() / 4;
+                        gold += heroes.getAllLegendary().getPrice() * priceDuplicationReward / 100;
                         spendGoldForItem();
                     }
                 }
             }
-            System.out.println("Number of boxes needed : " + boxesNeeded / 4);// 
+            System.out.println("Number of boxes needed : " + boxesNeeded / itemPerBox);// 
         }
-        System.out.println("Number of boxes needed average : " + boxesNeeded/ numberTest / 4);//
+        System.out.println("Number of boxes needed average : " + boxesNeeded/ numberTest / itemPerBox);//
     }
 
     private static void spendGoldForItem(){
